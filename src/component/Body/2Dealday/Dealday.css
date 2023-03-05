@@ -1,0 +1,116 @@
+/* .dealday{
+    padding: 50px;
+} */
+/* 
+.dealday img{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.705);
+} */
+.dealday {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 50px 50px 50px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  
+}
+.dealday > div {
+  flex: 1;
+  position: relative;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.705);
+  border-radius: 12px;
+}
+.dealday > div:first-child {
+  flex: 2;
+  box-shadow: none;
+  padding: 0 20px 0 0px;
+}
+.dealday > div:first-child h2 {
+  font-size: 3em !important;
+}
+.dealday > div:first-child p {
+  font-size: 1em;
+}
+.dealday > div:first-child h2 span {
+  color: #14b1f0;
+}
+.dealday > div:first-child button {
+  background-color: #14b1f0;
+  width: 50%;
+  color: white;
+  padding: 10px 40px;
+  border: none;
+  outline-color: invert;
+  border-radius: 13px;
+  transition: all 0.5s linear;
+}
+.dealday > div:first-child button:hover {
+  box-shadow: 2px 2px 10px black;
+}
+
+.dealday > div > div > div {
+  position: relative;
+}
+.dealday > div:nth-child(2),
+.dealday > div:nth-child(3),
+.dealday > div:nth-child(4) {
+  border: 1px solid #0e3b3e;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+.dealday > div:nth-child(2) img,
+.dealday > div:nth-child(3) img,
+.dealday > div:nth-child(4) img {
+  transition: all 0.5s linear;
+}
+.dealday > div:nth-child(2):hover img,
+.dealday > div:nth-child(3):hover img,
+.dealday > div:nth-child(4):hover img {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.dealdaytop {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  background-color: #daf4ffa1;
+  padding: 10px;
+  /* border-radius: 15px; */
+  width: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.664);
+}
+.dealdaytop > div > div:first-child {
+  font-size: 1.3rem;
+  color: #14b1f0;
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 10px rgb(255, 255, 255));
+}
+
+@media (max-width: 768px) {
+  .dealday {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .dealday > div:first-child {
+    width: 100%;
+  }
+  .dealday > div:first-child button {
+    width: 100%;
+  }
+  .dealday > div:nth-child(2),
+  .dealday > div:nth-child(3),
+  .dealday > div:nth-child(4) {
+    width: 100%;
+  }
+}

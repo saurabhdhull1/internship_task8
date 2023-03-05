@@ -1,0 +1,178 @@
+@mixin mobile {
+    @media (max-width: 620px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+.carousel-item {
+    transition: all 1s;
+    animation: fade-in .5s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+//  sliderBottom
+.sliderBottom {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px;
+    background: linear-gradient(180deg, #F3EDC9 0%, rgba(255, 255, 255, 0) 100%);
+    overflow-y: scroll;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    div {
+        position: relative;
+        transition: all .5s;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+    }
+
+
+    div:nth-child(1) {
+
+        &::before {
+            content: "Electronics";
+            display: grid;
+            place-items: center;
+            position: absolute;
+            text-align: center;
+            color: white;
+            bottom: 1px;
+            font-weight: 700;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            font-size: 2rem;
+            background-color: rgba(0, 0, 0, 0.521);
+                transition: all .5s;
+        }
+
+        &:hover {
+            &::before {
+                color: rgb(255, 255, 255);
+                background-color: #00a9f4;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    div:nth-child(2) {
+
+        &::before {
+            content: "Fashion";
+            display: grid;
+            place-items: center;
+            position: absolute;
+            text-align: center;
+            color: white;
+            bottom: 1px;
+            font-weight: 700;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            font-size: 2rem;
+            background-color: rgba(0, 0, 0, 0.521);
+            transition: all .5s;
+        }
+
+        &:hover {
+            &::before {
+                color: rgb(255, 255, 255);
+                background-color: #00a9f4;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    div:nth-child(3) {
+
+        &::before {
+            content: "Appliances";
+            display: grid;
+            place-items: center;
+            position: absolute;
+            text-align: center;
+            color: white;
+            bottom: 1px;
+            font-weight: 700;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            font-size: 2rem;
+            background-color: rgba(0, 0, 0, 0.521);
+            transition: all .5s;
+        }
+
+        &:hover {
+            &::before {
+                color: rgb(255, 255, 255);
+                background-color: #00a9f4;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    div:nth-child(4) {
+
+        &::before {
+            content: "Babies Store";
+            display: grid;
+            place-items: center;
+            position: absolute;
+            text-align: center;
+            color: white;
+            bottom: 1px;
+            font-weight: 700;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            font-size: 2rem;
+            background-color: rgba(0, 0, 0, 0.521);
+            transition: all .5s;
+        }
+
+        &:hover {
+            &::before {
+                color: rgb(255, 255, 255);
+                background-color: #00a9f4;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+}

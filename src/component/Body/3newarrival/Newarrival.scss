@@ -1,0 +1,127 @@
+@mixin tablet {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 620px) {
+        @content;
+    }
+}
+
+
+.newarrival {
+    padding: 40px;
+    background: linear-gradient(to bottom, #f9f4d4, white); 
+
+    @include tablet {
+        padding: 0;
+    }
+}
+
+.newarrivalTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    @include tablet {
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+}
+
+.newarrivalmini1 {
+    // display: grid;
+    // grid-template-columns: repeat(6, 1fr);
+    // place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+
+        grid-template-columns: 2fr 1fr;
+
+    }
+
+
+    .newarrivalmini11 {
+
+        
+    @include mobile {
+        width: 100%;
+    }
+    }
+}
+
+
+.newarrivalmini {
+    background-color: #fff;
+    border: 1px solid #00b1b9;
+    padding: 10px;
+    border-radius: 12px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    @include mobile{
+        font-size: large;
+        font-weight: bolder;
+    }
+    img{
+        width: 100%;
+    }
+    div>p:nth-child(1) {
+        margin: 0;
+    }
+
+    div>p:nth-child(2) {
+        color: #00b1b9;
+    }
+
+    .rate {
+        display: flex;
+        font-size: small;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile{
+            font-size: larger;
+            gap: 20px;
+        }
+        div {
+            color: #00b1b9;
+        }
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+        outline: none;
+        border: 0;
+        background-color: #00b1b9;
+        color: white;
+        padding: 5px;
+        transition: all .5s;
+        border-radius: 8px;
+        @include mobile{
+            padding: 10px;
+            font-size: large;
+        }
+        &:hover {
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.466);
+        }
+
+        &:active {
+            transform: scale(.9);
+        }
+    }
+}

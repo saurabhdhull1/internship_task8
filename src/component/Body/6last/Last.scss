@@ -1,0 +1,135 @@
+@mixin tablet {
+    @media (max-width: 1323px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 930px) {
+        @content;
+    }
+}
+
+.last {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(180deg, #F3EDC9 0%, rgba(255, 255, 255, 0) 100%);
+    grid-template-columns: repeat(3, 1fr);
+
+    h1 {
+        background-color: #d8d8d8;
+        padding: 20px;
+        text-align: center;
+        font-size: "3rem";
+        margin-bottom: 20px;
+
+        span {
+            color: #00a9f4;
+        }
+
+    }
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.lastmini {
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    border: 1px solid #00a9f4;
+    background-color: white;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width:450px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    img {
+        width: 100%;
+
+    }
+
+    .rate {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        @media (max-width:450px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        strike {
+            color: red;
+        }
+
+        span {
+            color: #00a9f4;
+        }
+    }
+
+    div:nth-child(2) {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width:450px) {
+            padding: 0;
+        }
+
+        div:nth-child(1) {
+
+            @include mobile {
+                margin-bottom: 20px;
+                margin-top: 20px;
+                text-align: center;
+                background-color: #d8d8d8;
+                width: 100%;
+                padding: 5px;
+                border-radius: 12px;
+
+                color: #292929;
+            }
+        }
+
+        p {
+            color: #00b6bb;
+            font-size: 1.5rem;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+            outline: none;
+            border: 0;
+            background-color: #00b1b9;
+            color: white;
+            padding: 5px;
+            transition: all .5s;
+
+            @include mobile {
+                padding: 10px;
+                font-size: large;
+            }
+
+            &:hover {
+                box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.466);
+            }
+
+            &:active {
+                transform: scale(.9);
+            }
+        }
+    }
+}

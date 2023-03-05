@@ -1,0 +1,34 @@
+.footer{
+    background-color: #000000d3 !important;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+.footer h4{
+    color: #00CAD7;
+    font-size: 20px !important;
+}
+.footer span{
+    color: #00CAD7;
+    cursor: pointer;
+}
+.footer img{
+    /* padding: 20px 0; */
+}
+.footer a{
+    color: #d4d4d4;
+}
+.footer a:hover{
+    color: #9bf8ff;
+}
+.bottomfooter{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    border-top: 1px solid white;
+}
+
+@media (max-width:786px){
+    .footer > .container{
+        padding-left: 20px;
+    }
+}
